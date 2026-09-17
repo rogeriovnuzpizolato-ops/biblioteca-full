@@ -10,6 +10,18 @@ async function buscarLivros() {
     return livros;
 }
 
+async function salvarLivro(livro) {
+    const resposta = await fetch(API_URL, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(livro)
+    });
+
+    return await resposta.json();
+}
+
 async function alugarLivro(id) {
     const resposta = await fetch(`${API_URL}/${id}/alugar`, {
         method: "PUT"
