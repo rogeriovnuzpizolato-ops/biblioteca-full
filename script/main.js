@@ -30,4 +30,21 @@ listaLivros.addEventListener("click", async (evento) => {
     init();
 });
 
+const formLivro = document.getElementById("form-livro");
+
+formLivro.addEventListener("submit", async (evento) => {
+    evento.preventDefault();
+
+    const titulo = document.getElementById("titulo").value;
+    const autor = document.getElementById("autor").value;
+    const anoPublicacao = document.getElementById("anoPublicacao").value;
+
+    const novoLivro = { titulo, autor, anoPublicacao };
+
+    await salvarLivro(novoLivro);
+
+    formLivro.reset();
+    init();
+});
+
 init();
