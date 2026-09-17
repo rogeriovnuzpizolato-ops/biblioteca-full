@@ -10,6 +10,7 @@ async function buscarLivros() {
     return livros;
 }
 
+// salvar livro
 async function salvarLivro(livro) {
     const resposta = await fetch(API_URL, {
         method: "POST",
@@ -22,6 +23,7 @@ async function salvarLivro(livro) {
     return await resposta.json();
 }
 
+// alugar livro
 async function alugarLivro(id) {
     const resposta = await fetch(`${API_URL}/${id}/alugar`, {
         method: "PUT"
@@ -29,6 +31,7 @@ async function alugarLivro(id) {
     return await resposta.json();
 }
 
+// devolver livro 
 async function devolverLivro(id) {
     const resposta = await fetch(`${API_URL}/${id}/devolver`, {
         method: "PUT"
@@ -36,6 +39,7 @@ async function devolverLivro(id) {
     return await resposta.json();
 }
 
+// deletar livro 
 async function deletarLivro(id) {
     await fetch(`${API_URL}/${id}`, {
         method: "DELETE"
