@@ -9,3 +9,23 @@ async function buscarLivros() {
     // devolve o array de livros 
     return livros;
 }
+
+async function alugarLivro(id) {
+    const resposta = await fetch(`${API_URL}/${id}/alugar`, {
+        method: "PUT"
+    });
+    return await resposta.json();
+}
+
+async function devolverLivro(id) {
+    const resposta = await fetch(`${API_URL}/${id}/devolver`, {
+        method: "PUT"
+    });
+    return await resposta.json();
+}
+
+async function deletarLivro(id) {
+    await fetch(`${API_URL}/${id}`, {
+        method: "DELETE"
+    });
+}
