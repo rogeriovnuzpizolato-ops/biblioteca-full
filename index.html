@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>📚 Minha Biblioteca</h1>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Cadastrar novo livro</h2>
+            <form id="form-livro">
+                <input type="text" id="titulo" placeholder="Título" required>
+                <input type="text" id="autor" placeholder="Autor" required>
+                <input type="number" id="anoPublicacao" placeholder="Ano de publicação" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </section>
+
+        <section class="lista-section">
+            <h2>Livros cadastrados</h2>
+            <div id="lista-livros">
+                <!-- Os livros vão aparecer aqui, via JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
