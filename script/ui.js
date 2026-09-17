@@ -15,6 +15,7 @@ function renderizarLivros(livros) {
 
         const statusTexto = livro.disponivel ? "Disponível" : "Emprestado";
 
+        // ouve os eventos de clique nos botoes de ação do card 
         card.innerHTML = `
             <div class="livro-info">
                 <strong>${livro.titulo}</strong>
